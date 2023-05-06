@@ -1,0 +1,12 @@
+.headerBox {
+padding: 15px 15px;
+border-bottom: 1px solid rgb(181, 180, 180);
+background-color: #fae6f8;
+box-shadow: 50px 50px 150px 220px #f3caef;
+
+}
+.blocksWrapper {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}

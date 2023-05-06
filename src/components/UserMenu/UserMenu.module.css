@@ -1,0 +1,30 @@
+.menuBox{
+    display: flex;
+    align-items: baseline;
+    gap:10px
+}
+.menuText{
+    font-size: 20px;
+    color: #545454;
+}
+.menuButton{
+     
+            padding: 5px 10px;
+            background: linear-gradient(55.95deg, #f9aead 0%, #ffb8ea 100%);
+            border-width: 0px;
+            border-radius: 4px;
+            color: #FFFFFF;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+}
+.menuButton:hover{
+color: #f6d9d9;
+background: linear-gradient(55.95deg,#ffb8ea 100%, #f9aead 0%,);
+}
+
+.menuButton:focus{
+color: #f6d9d9;
+background: linear-gradient(55.95deg, #ffb8ea 100%, #f9aead 0%, );
+}

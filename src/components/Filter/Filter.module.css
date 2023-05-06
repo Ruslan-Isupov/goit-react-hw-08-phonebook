@@ -1,0 +1,26 @@
+
+.filterInput{
+  padding: 5px 10px;
+  background-color:rgb(254, 198, 234);
+  border-radius: 10%;
+  border: 2px solid rgb(251, 191, 230);
+  box-shadow: 2px 2px 2px gray;
+}
+ .filterInput:hover {
+    background-color: rgb(253, 167, 223);
+  }
+
+  .filterInput:focus {
+    background-color: rgb(253, 167, 223);
+  }
+
+
+ .filterContainer{
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  
+}
+

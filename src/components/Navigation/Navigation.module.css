@@ -1,0 +1,19 @@
+.boxNav {
+    display: flex;
+    gap: 10px;
+    align-items:center ;
+
+}
+.navList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.linkNav {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        color: #545454;
+        }
