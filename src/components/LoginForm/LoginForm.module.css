@@ -20,27 +20,26 @@
   gap: 15px;
 }
 
-
 .loginButton {
-    display: block;
-    width: 100px;
-    margin: 0 auto;
-    padding: 10px 20px;
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  padding: 10px 20px;
 
-    background-color: rgba(245, 126, 225, 0.637);
-    color: rgb(77, 77, 77);
-    border-radius: 10%;
-    border: 2px solid rgba(255, 143, 236, 0.637);
+  background-color: rgba(245, 126, 225, 0.637);
+  color: rgb(77, 77, 77);
+  border-radius: 10%;
+  border: 2px solid rgba(255, 143, 236, 0.637);
 }
 
 .loginButton:hover {
-    background-color: rgba(247, 101, 222, 0.637);
-    color: white;
+  background-color: rgba(247, 101, 222, 0.637);
+  color: white;
 }
 
 .registerButton:focus {
-    background-color: rgba(247, 101, 222, 0.637);
-    color: white;
+  background-color: rgba(247, 101, 222, 0.637);
+  color: white;
 }
 .loginInput {
   margin-top: 5px;

@@ -34,8 +34,7 @@ const form = e.currentTarget
         <input className={css.loginInput} type="password" name="password" />
       </label>
       <button className={css.loginButton} type="submit">
-        {/* <NavLink to="/contacts">Log In</NavLink> */}
-        Log in
+      Log in
       </button>
     </form>
     )

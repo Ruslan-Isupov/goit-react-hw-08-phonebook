@@ -17,9 +17,8 @@ const NotFoundPage = lazy(() => import('../pages/NotFoundPage'));
 export const App = () => {
   const dispatch = useDispatch();
 
-  // const { items, isLoading, error } = useSelector(selectContacts);
 
-  useEffect(() => {
+ useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 

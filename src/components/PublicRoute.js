@@ -5,6 +5,6 @@ import { selectAuth } from 'redux/selectors';
 export const PublicRoute = ({ children }) => {
   const { isLoggedIn } = useSelector(selectAuth);
   const { state } = useLocation();
-  console.log(state);
+
   return !isLoggedIn ? children : <Navigate to={state ? state : '/contacts'} />;
 };
