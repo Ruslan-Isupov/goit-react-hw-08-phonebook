@@ -7,9 +7,7 @@ const initialStateUser = {
   isLoggedIn: false,
   isRefreshing: false,
 };
-const handlePending = state => {
-  state.isLoggedIn = true;
-};
+
 const handleRejected = (state, action) => {
   state.isLoggedIn = false;
   state.error = action.payload;
@@ -19,9 +17,6 @@ const authSlice = createSlice({
   name: 'auth',
   initialState: initialStateUser,
   extraReducers: {
-    [register.pending]: handlePending,
-    [login.pending]: handlePending,
-    [logOut.pending]: handlePending,
     [register.rejected]: handleRejected,
     [login.rejected]: handleRejected,
     [logOut.rejected]: handleRejected,

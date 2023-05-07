@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Notiflix from 'notiflix';
 
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
@@ -24,6 +25,7 @@ export const register = createAsyncThunk(
       setAuthHeader(response.data.token);
       return response.data;
     } catch (e) {
+      Notiflix.Notify.failure('Bad Request! Try more corresponding password!');
       return thunkApi.rejectWithValue(e.message);
     }
   }
@@ -40,6 +42,8 @@ export const login = createAsyncThunk(
       setAuthHeader(response.data.token);
       return response.data;
     } catch (e) {
+      console.log('Problem in login ');
+      Notiflix.Notify.failure('Bad Request! Try It again!');
       return thunkApi.rejectWithValue(e.message);
     }
   }
@@ -51,6 +55,7 @@ export const logOut = createAsyncThunk(`auth/logout`, async (_, thunkApi) => {
     clearAuthHeader();
     return response.data;
   } catch (e) {
+    Notiflix.Notify.failure('Bad Request! Try It again!');
     return thunkApi.rejectWithValue(e.message);
   }
 });
@@ -69,6 +74,7 @@ export const refreshUser = createAsyncThunk(
       const response = await axios.get('/users/current');
       return response.data;
     } catch (error) {
+      Notiflix.Notify.failure('Bad Request! Try It again!');
       return thunkAPI.rejectWithValue(error.message);
     }
   }

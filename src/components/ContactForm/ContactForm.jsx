@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { selectContacts } from 'redux/selectors';
 import css from "./ContactForm.module.css"
 import { addContact } from 'redux/contacts/contactsOperations';
+import Notiflix from 'notiflix';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -29,7 +30,7 @@ export const ContactForm = () => {
     e.preventDefault();
     checkSameName(name) === undefined
       ? dispatch(addContact({ name, number }))
-      : alert('This name exists yet.Try again!');
+      : Notiflix.Notify.failure('You have already had this name!');;
     resetForm();
   };
   const resetForm = () => {

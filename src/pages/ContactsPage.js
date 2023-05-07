@@ -7,7 +7,7 @@ import { selectContacts } from 'redux/selectors';
 import { ContactList } from 'components/ContactList/ContactList';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { Filter } from 'components/Filter/Filter';
-import { Blocks } from 'react-loader-spinner';
+import { Dna } from 'react-loader-spinner';
 import css from '../components/Layout/Layout.module.css';
 
 const ContactsPage = () => {
@@ -27,11 +27,12 @@ const ContactsPage = () => {
           <ContactForm />
           <Filter />
           {isLoading && !error && (
-            <Blocks
+            <Dna
               visible={true}
-              height="80"
-              width="80"
-              ariaLabel="blocks-loading"
+              height="40"
+              width="40"
+              ariaLabel="dna-loading"
+              wrapperStyle={{}}
               wrapperClass={css.blocksWrapper}
             />
           )}

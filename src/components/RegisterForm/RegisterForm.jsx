@@ -1,13 +1,12 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/authOperations';
 import css from './RegisterForm.module.css'
-import { useSelector } from "react-redux";
-import { selectAuth } from "redux/selectors";
-import { Navigate } from 'react-router-dom';
+
+
 
 export const RegisterForm = () => {
      const dispatch = useDispatch();
-     const {isLoggedIn} = useSelector(selectAuth)
+    
   
   const handleSubmit = e => {
   const form = e.currentTarget;
@@ -21,11 +20,7 @@ export const RegisterForm = () => {
       })
       );
     form.reset()
-    if (isLoggedIn) {
-         console.log(isLoggedIn)
-         return <Navigate to="/contacts" replace />
-      };
-  };
+ };
     return (
         <form className ={css.registerForm} onSubmit={handleSubmit} autoComplete="off">
       <label >

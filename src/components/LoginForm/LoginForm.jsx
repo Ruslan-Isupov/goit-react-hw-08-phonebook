@@ -1,18 +1,13 @@
 import { useDispatch } from "react-redux";
 import { login } from "redux/auth/authOperations";
 import css from './LoginForm.module.css'
-import { useSelector } from "react-redux";
-import { selectAuth } from "redux/selectors";
-import { Navigate } from 'react-router-dom';
 
 export const LoginForm = () => {
       
     const dispatch = useDispatch();
-    const {isLoggedIn} = useSelector(selectAuth)
     const handleSubmit = e => {
       e.preventDefault();
-      console.log("працює на submit")
-const form = e.currentTarget
+      const form = e.currentTarget
     dispatch(
       login({
         email: form.elements.email.value,
@@ -20,9 +15,7 @@ const form = e.currentTarget
       })
     );
   };
-  if (isLoggedIn) {
-         return <Navigate to="/contacts" replace />
-      };
+ 
     return (
          <form className={css.loginForm} onSubmit={handleSubmit} autoComplete="off">
       <label>
