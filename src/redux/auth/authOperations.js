@@ -42,7 +42,6 @@ export const login = createAsyncThunk(
       setAuthHeader(response.data.token);
       return response.data;
     } catch (e) {
-      console.log('Problem in login ');
       Notiflix.Notify.failure('Bad Request! Try It again!');
       return thunkApi.rejectWithValue(e.message);
     }
